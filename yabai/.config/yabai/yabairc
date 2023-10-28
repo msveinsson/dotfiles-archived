@@ -1,0 +1,67 @@
+#!/usr/bin/env sh
+#
+# ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
+# ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
+#  ╚████╔╝ ███████║██████╔╝███████║██║
+#   ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
+#    ██║   ██║  ██║██████╔╝██║  ██║██║
+#    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
+# A tiling window manager for macOS
+# https://github.com/koekeishiya/yabai
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# global settings
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+yabai -m config window_origin_display default
+yabai -m config window_placement second_child
+yabai -m config window_topmost off
+yabai -m config window_shadow float
+yabai -m config window_opacity off
+yabai -m config window_opacity_duration 0.0
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.90
+yabai -m config window_border on
+yabai -m config window_border_width 2
+yabai -m config active_window_border_color 0xE032CD32
+yabai -m config normal_window_border_color 0xE02d74da
+yabai -m config insert_feedback_color 0x00010101
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+yabai -m config mouse_modifier fn
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
+
+# general space settings
+yabai -m config layout bsp
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
+
+# apps to not manage (ignore)
+yabai -m rule --add title='Preferences$' manage=off topmost=on
+yabai -m rule --add lable="1Password" app="^1Password$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Alfred Preferances$" manage=off
+yabai -m rule --add app="^Bartender 4$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Cisco Secure Client$" manage=off
+yabai -m rule --add app="^CleanMyMac X$" manage=off
+yabai -m rule --add app="^Dictionary$" manage=off
+yabai -m rule --add app="^Docker$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Github Desktop$" manage=off
+yabai -m rule --add app="^Microsoft Remote Desktop$" manage=off
+yabai -m rule --add app="^System Preferences$" title=".*" manage=off
+yabai -m rule --add app="^System Settings$" title=".*" manage=off
+yabai -m rule --add label="Software Update" title="Software Update" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+
+echo "yabai configuration loaded.."
