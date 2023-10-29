@@ -3,7 +3,7 @@
 set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-DOT_FOLDERS="alacritty,bash,bat,gh-dash,git,htop,kitty,lf,neofetch,powershell,starship,yabai,zsh"
+DOT_FOLDERS="alacritty,bash,bat,fish,gh-dash,git,htop,kitty,lf,neofetch,powershell,starship,yabai,zsh"
 
 echo "[+] Dotfiles :: $SCRIPT_DIR"
 
