@@ -1,0 +1,49 @@
+#
+# ███████╗██╗███████╗██╗  ██╗
+# ██╔════╝██║██╔════╝██║  ██║
+# █████╗  ██║███████╗███████║
+# ██╔══╝  ██║╚════██║██╔══██║
+# ██║     ██║███████║██║  ██║
+# ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+# A smart and user-friendly command line
+# https://fishshell.com/
+
+eval (/opt/homebrew/bin/brew shellenv)
+starship init fish | source # https://starship.rs/
+zoxide init fish | source # 'ajeetdsouza/zoxide'
+
+set -U fish_greeting # disable fish greeting
+set -U fish_key_bindings fish_vi_key_bindings
+# set -U LANG en_US.UTF-8
+# set -U LC_ALL en_US.UTF-8
+
+set -Ux BAT_THEME Catppuccin-mocha # 'sharkdp/bat' cat clone
+set -Ux EDITOR nvim # 'neovim/neovim' text editor
+set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
+set -Ux PAGER "~/.local/bin/nvimpager" # 'lucc/nvimpager'
+set -Ux VISUAL nvim
+
+set -Ux XDG_DATA_HOME $HOME/.local/share
+set -Ux XDG_CONFIG_HOME $HOME/.config
+set -Ux XDG_STATE_HOME $HOME/.local/state
+set -Ux XDG_CACHE_HOME $HOME/.cache
+set -Ux XDG_RUNTIME_DIR "/run/user/$UID"
+
+# ncurses - CRT screen handling and optimization package
+set -Ux TERMINFO "$XDG_DATA_HOME/terminfo"
+set -Ux TERMINFO_DIRS "$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
+
+set -Ux ANSIBLE_HOME "$XDG_CONFIG_HOME/ansible"
+set -Ux ANSIBLE_CONFIG "$XDG_CONFIG_HOME/ansible.cfg"
+set -Ux ANSIBLE_GALAXY_CACHE_DIR "$XDG_CACHE_HOME/ansible/galaxy_cache"
+
+set -Ux DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
+set -Ux ANDROID_HOME "$XDG_DATA_HOME/android"
+set -Ux LESSHISTFILE "$XDG_CACHE_HOME/less/history"
+set -Ux NUGET_PACKAGES "$XDG_CACHE_HOME/NuGetPackages"
+
+# golang - https://golang.google.cn/
+set -Ux GOPATH (go env GOPATH)
+fish_add_path $GOPATH/bin
+
+fish_add_path $HOME/.config/bin # custom scripts
