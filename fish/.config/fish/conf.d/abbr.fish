@@ -64,7 +64,7 @@ abbr mt "man tmux"
 abbr mf "man fzf"
 abbr mz "man zoxide"
 
-bbr o "open ."
+abbr o "open ."
 
 abbr rmr "rm -rf"
 
