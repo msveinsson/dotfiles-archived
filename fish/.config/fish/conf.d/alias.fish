@@ -1,13 +1,9 @@
 set alias clip ="pbcopy"
 
-# Exa aliases
-alias ls "exa --icons --group-directories-first"
-alias ll "exa --icons --group-directories-first -l"
-alias l "ls -l"
-alias la "ls -a"
-alias lla "ls -la"
-alias lt "exa -T"
-alias lta "exa -T -a"
+# Lsd aliases
+alias l "lsd  --group-dirs first -A"
+alias ll "lsd  --group-dirs first -Al"
+alias lt "lsd  --group-dirs last -A --tree"
 
 # Run Update scripts
 alias ub "~/.config/bin/brew-update.sh"
