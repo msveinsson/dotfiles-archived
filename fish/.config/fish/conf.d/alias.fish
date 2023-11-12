@@ -1,4 +1,4 @@
-set alias clip ="pbcopy"
+alias clip "pbcopy"
 
 # Lsd aliases
 alias l "lsd  --group-dirs first -A"
