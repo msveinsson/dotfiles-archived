@@ -1,0 +1,89 @@
+# Homebrew abbreviations
+abbr bi="brew install"
+abbr bic="brew install --cask"
+abbr bin="brew info"
+abbr binc="brew info --cask"
+abbr bl="brew leaves"
+abbr blr="brew leaves --installed-on-request"
+abbr blp="brew leaves --installed-as-dependency"
+abbr bs="brew search"
+
+# System abbreviations
+abbr c="clear"
+abbr cl="clear"
+abbr cx="chmod +x"
+abbr x="chmod +x (ls | gum filter --limit 1 --header 'chmod +x')"
+abbr e="exit"
+abbr ka="killall"
+abbr o="open ."
+abbr rmr="rm -rf"
+
+# Docker abbreviations
+abbr dc="docker compose"
+abbr dcd="docker compose down"
+abbr dcdv="docker compose down -v"
+abbr dcr="docker compose restart"
+abbr dcu="docker compose up -d"
+abbr dps="docker ps --format 'table {{.Names}}\t{{.Status}}'"
+
+# Git abbreviations
+abbr ga="git add ."
+abbr gc="git commit"
+abbr gcl="git clone"
+abbr gco="git checkout -b"
+abbr gcom="~/.config/bin/git-to-master-cleanup-branch.sh"
+abbr gd="nvim +DiffviewOpen"
+abbr gf="git fetch --all"
+abbr gl="git pull"
+abbr gp="git push"
+abbr gr="git remote"
+abbr gra="git remote add"
+abbr grao="git remote add origin"
+abbr grau="git remote add upstream"
+abbr grv="git remote -v"
+abbr gs="git status"
+
+# Lazygit abbreviations
+abbr ld="lazydocker"
+
+# Lazygit abbreviations
+abbr lg="lazygit"
+
+# Man abbreviations
+abbr mt="man tmux"
+abbr mf="man fzf"
+abbr mz="man zoxide"
+
+# Source abbreviations
+abbr st="tmux source ~/.config/tmux/tmux.conf"
+abbr sz="source ~/.config/zsh/.zshrc"
+
+# Tmux abbreviations
+abbr ta="tmux a"
+abbr tat="tmux attach -t"
+abbr td="t dotfiles"
+abbr tk="tmux kill-server"
+abbr tks="tmux kill-server"
+abbr tr="tldr --list | fzf --header 'tldr (tealdeer)' --reverse --preview 'tldr {1} --color=always' --preview-window=right,80% | xargs tldr"
+abbr tn="tmux new -s (basename (pwd))"
+abbr tt="touch t && chmod +x t && echo -e '#!/usr/bin/env bash\n' > t && nvim t"
+#abbr tt="t -d pwd"
+
+abbr v="nvim +GoToFile"
+abbr vfzf="nvim (fd --type f --hidden --follow --exclude .git | fzf-tmux -p -w 100 --reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}')"
+abbr va="nvim ~/.config/alacritty/alacritty.yml"
+abbr vz="nvim ~/.config/zsh/.zshrc"
+abbr vt="nvim ~/.config/tmux/tmux.conf"
+
+# Zoxide abbreviations
+abbr za="zoxide add"
+abbr ze="zoxide edit"
+
+# Misc abbreviations
+abbr :GoToCommand="fzf-history-widget
+abbr :GoToFile="nvim +GoToFile"
+abbr :SmartGoTo="nvim +SmartGoTo"
+abbr :Grep="nvim +Grep"
+abbr :bd="exit"
+abbr :q="tmux kill-server"
+abbr :qa!="tmux kill-server"
