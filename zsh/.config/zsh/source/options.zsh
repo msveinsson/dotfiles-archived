@@ -12,3 +12,4 @@
   setopt autocd                     # if only directory path is entered, cd there.
   setopt inc_append_history         # save commands are added to the history immediately, otherwise only when shell exits.
   setopt histignorespace            # Don't save commands that start with space
+  setopt share_history              # Share history between sessions

@@ -8,6 +8,9 @@ HISTSIZE=110000
 SAVEHIST=100000
 HISTFILE="${ZDOTDIR:-$HOME}/.histfile"
 
+# disable shell sessions
+SHELL_SESSIONS_DISABLE=1
+ 
 # source
 plug "${ZDOTDIR}/source/aliases.zsh"
 plug "${ZDOTDIR}/source/exports.zsh"

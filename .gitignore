@@ -4,4 +4,5 @@ tmux/.config/tmux/plugins/
 powershell/.config/Powershell/Community/
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zsh_history
+zsh/.config/zsh/.zsh_sessions
 .DS_Store
