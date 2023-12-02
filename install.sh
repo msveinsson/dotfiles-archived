@@ -9,18 +9,18 @@ DOT_FOLDERS=(
     "bat"
     "bin"
     "fish"
-    "gh-dash"
     "git"
     "htop"
     "kitty"
-    "lf"
     "neofetch"
     "powershell"
-    "skhd"
     "sketchybar"
+    "skhd"
     "starship"
     "tmux"
     "yabai"
+    "yazi"
+    "wezterm"
     "zsh"
 )
 
@@ -32,5 +32,5 @@ fi
 
 for folder in ${DOT_FOLDERS[@]}; do
   echo "[+] Folder :: $folder"
-  #stow -t $HOME $folder
+  stow -t $HOME $folder
 done
