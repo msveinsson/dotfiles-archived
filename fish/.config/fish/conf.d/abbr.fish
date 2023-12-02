@@ -1,6 +1,6 @@
 # fish abbreviations
-# https://fishshell.com/docs/current/cmds/abbr.html
 
+# homebrew
 abbr bi "brew install"
 abbr bic "brew install --cask"
 abbr bin "brew info"
@@ -14,6 +14,11 @@ abbr c clear
 abbr cl clear
 abbr cx "chmod +x"
 
+# cd to directories
+abbr cdpers "cd ~/code/personal"
+abbr cdwork "cd ~/code/work"
+
+# docker
 abbr dc "docker compose"
 abbr dcd "docker compose down"
 abbr dcdv "docker compose down -v"
@@ -23,11 +28,13 @@ abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 
 abbr e exit
 
+# fisher plugin manager
 abbr fi "fisher install"
 abbr fr "fisher refresh"
 abbr fu "fisher update"
 abbr fl "fisher list | sed 's/.*/"&"/'"
 
+# git
 abbr g "git status"
 abbr ga "git add ."
 abbr gb "git branch -v"
