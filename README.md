@@ -1,4 +1,4 @@
-# TheM4gnus dotfiles
+# My Old dotfiles
 
 ![screenshot](./screenshot.png)
 
@@ -6,7 +6,7 @@ This is the home of my old dotfiles.
 
 I decided to archive my current dotfiles repository and start fresh in a new one. The reason behind this is that the current repository has become bloated from my experimentation and learning.
 
-My new [dotfiles](https://github.com/TheM4gnus/dotfiles)
+My new [dotfiles](https://github.com/msveinsson/dotfiles)
 
 ## Software
 
